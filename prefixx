@@ -19,16 +19,16 @@ void eval (stck *,char, int, int);
 void main()
 {
 char pre[MAX];
-int num1,num2, item, 1,i,pr;
+int num1,num2, item,(1),i,pr;
 stck stk;
 
 fflush(stdin);
 clrscr();
 
 init(&stk);
-printf(" ENTER THE PREFIX EXPRESSION *);
+printf("ENTER THE PREFIX EXPRESSION");
 gets (pre);
-1=strlen(pre);
+l=strlen(pre);
 for(i=1-1;i>=0;i--)
 if(pre[i]==''||pre[i]=='\t')
 continue;
@@ -38,9 +38,10 @@ switch(gettype(pre[i]))
 case OPERAND: item=pre[i]-'0';
 push(&stk, item);
 break;
-case OPERATOR: numl=pop (&stk);
+case OPERATOR: 
+numl=pop (&stk);
 num2=pop (&stk);
-eval(&stk, pre[i],numl,num2);
+eval(&stck, pre[i],numl,num2);
 }
 }
 printf("%d", stk.stack[0]);
@@ -95,3 +96,4 @@ case '%':return OPERATOR;
 default: return OPERAND;
 }
 }
+
