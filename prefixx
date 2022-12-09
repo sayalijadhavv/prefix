@@ -19,7 +19,7 @@ void eval (stck *,char, int, int);
 void main()
 {
 char pre[MAX];
-int num1,num2, item,(1),i,pr;
+int num1,num2, item,i,pr;
 stck stk;
 
 fflush(stdin);
